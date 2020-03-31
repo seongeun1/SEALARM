@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".googlemap">
+
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/realtimemap"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    <SearchView
+        android:id="@+id/sv_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_round"
+        android:elevation="5dp"
+        android:iconifiedByDefault="false"
+        android:queryHint="Search..." />
+
+
+    <Button
+        android:id="@+id/buttonclick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="114dp"
+        android:layout_marginBottom="65dp"
+        android:text="Check Location"
+        android:textSize="5dp" />
+
+    <TextView
+        android:id="@+id/distancetext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/buttonclick"
+        android:textSize="10dp"
+
+        android:text="Text1" /> />
+
+    <fragment
+
+        android:id="@+id/place_autocomplete_fragment"
+        android:name="com.google.android.libraries.places.compat.ui.PlaceAutocompleteFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+</RelativeLayout>
+
